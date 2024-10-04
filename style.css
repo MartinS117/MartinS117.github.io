@@ -1,0 +1,139 @@
+body {
+    background-color:whitesmoke;
+    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+    font-weight: bold;
+    color:black;
+    margin:0;
+}
+
+/* Typography */
+
+@font-face {
+    src:url("Fonts/Nilad");
+    font-family:"Nilad";
+}
+
+@keyframes coloreffect {
+    0% {
+        color: red;
+    }
+    100% {
+        color:blue;
+    }
+}
+
+div.textcenter {
+text-align: center;
+}
+
+div.textright {
+text-align:right;
+}
+
+div.largetext {
+    font-size:  150px;
+    line-height: 300px;
+    font-family:"Nilad";
+    animation:coloreffect;
+}
+
+div.mediumtext {
+    font-size:36px;
+    line-height:22px;
+}
+
+div.smalltext {
+    font-size:14px;
+    line-height:15px;
+}
+
+div.serif {
+    font-family:'Times New Roman', Times, serif;
+}
+
+img {
+    width: 100%;
+}
+
+/* Colours */
+
+div.fontblack {
+    color: black;
+}
+
+div.fontgold {
+    color: gold;
+}
+
+div.fontbrown {
+    color:brown;
+}
+
+div.goldbg {
+    background-color:gold;
+}
+
+div.bluebg {
+    background-color: blue;
+}
+
+div.gradbg {
+    background: linear-gradient(152deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 33%, rgba(252,176,69,1) 100%);
+}
+
+/* Layout */
+
+div.width25 {
+    width: 25%;
+}
+
+div.width50 {
+    width: 50%;
+}
+
+div.width75 {
+    width: 75%;
+}
+
+div.width100 {
+    width: 100%;
+}
+
+div.height100 {
+    height: 100px;
+}
+
+div.ml200 {
+    margin-left:200px;
+}
+
+div.mlauto {
+    margin-left:auto;
+}
+
+div.mrauto {
+    margin-right:auto;
+}
+
+div.mb238 {
+    margin-bottom:238px;
+}
+
+div.mb25 {
+    margin-bottom:25px;
+}
+
+div.circle {
+    width:500px;
+    height:500px;
+    border-radius:100%;
+}
+
+div.container {
+    display:flex;
+    flex-wrap:wrap;
+}
+
+div.coloreffect {
+    animation: coloreffect 2s infinite;
+}
