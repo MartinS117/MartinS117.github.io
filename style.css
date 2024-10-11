@@ -9,8 +9,18 @@ body {
 /* Typography */
 
 @font-face {
-    src:url("Fonts/Nilad");
-    font-family:"Nilad";
+    src:url("Fonts/HalenoirCompact.otf");
+    font-family:"Halenoir";
+}
+
+@font-face {
+    src:url("Fonts/HalenoirThin.otf");
+    font-family:"HalenoirThin";
+}
+
+@font-face {
+    src:url("Fonts/HalenoirItalics.otf");
+    font-family:"HalenoirItalics";
 }
 
 @keyframes coloreffect {
@@ -22,8 +32,48 @@ body {
     }
 }
 
+/* marquee */
+@keyframes marquee {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+
+.marquee-container {
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    padding: 20px 0;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+div.marquee {
+    left: 100%;
+    width: 100%;
+    position: absolute;
+    white-space: nowrap;
+    animation: marquee 30s linear infinite;
+}
+
+
 div.textcenter {
 text-align: center;
+}
+
+div.textleft {
+    text-align:left;
 }
 
 div.textright {
@@ -31,28 +81,37 @@ text-align:right;
 }
 
 div.largetext {
-    font-size:  150px;
-    line-height: 300px;
-    font-family:"Nilad";
-    animation:coloreffect;
+    font-size:  70px;
+    line-height: 80px;
+    font-family:"Halenoir";
 }
 
 div.mediumtext {
     font-size:36px;
-    line-height:22px;
+    line-height:60px;
+    font-family:"Halenoir"
 }
 
 div.smalltext {
     font-size:14px;
-    line-height:15px;
+    line-height:20px;
+    font-family:"Halenoir";
 }
 
-div.serif {
-    font-family:'Times New Roman', Times, serif;
+div.thin {
+    font-family: "HalenoirThin";
+}
+
+div.italics {
+    font-family: "HalenoirItalics";
+}
+
+p {
+    text-decoration:underline;
 }
 
 img {
-    width: 100%;
+    width: 75%;
 }
 
 /* Colours */
@@ -61,16 +120,16 @@ div.fontblack {
     color: black;
 }
 
-div.fontgold {
-    color: gold;
+div.fontwhite {
+    color: white;
 }
 
 div.fontbrown {
     color:brown;
 }
 
-div.goldbg {
-    background-color:gold;
+div.blackbg {
+    background-color:black;
 }
 
 div.bluebg {
@@ -103,16 +162,16 @@ div.height100 {
     height: 100px;
 }
 
-div.ml200 {
-    margin-left:200px;
+div.ml20 {
+    margin-left:20px;
 }
 
-div.mlauto {
-    margin-left:auto;
+div.mr20 {
+    margin-right:20px;
 }
 
-div.mrauto {
-    margin-right:auto;
+div.mt60 {
+    margin-top:60px;
 }
 
 div.mb238 {
@@ -123,17 +182,44 @@ div.mb25 {
     margin-bottom:25px;
 }
 
+div.mb10 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+div.small {
+    flex-grow: 1;
+}
+
 div.circle {
     width:500px;
     height:500px;
     border-radius:100%;
 }
 
+
 div.container {
     display:flex;
     flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+div.container2 {
+    display:flex;
+    flex-wrap:nowrap;
 }
 
 div.coloreffect {
     animation: coloreffect 2s infinite;
 }
+
+/* Misc. */
+
+hr {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 2px black;
+  }
